@@ -8,10 +8,12 @@ import 'swiper/css/navigation';
 import { EffectCoverflow, Navigation, Autoplay } from 'swiper/modules';
 import { HeroWrapper } from "./Hero.style";
 
+
 export default function Hero() {
 
     return (
         <HeroWrapper>
+            <div className="containerCarts">
             <Swiper
                 effect={'coverflow'}
                 centeredSlides={true}
@@ -57,6 +59,7 @@ export default function Hero() {
                     <img src="src/assets/img/8.jpg" alt="movie" />
                 </SwiperSlide>
             </Swiper>
+            </div>
         </HeroWrapper>
     )
 }
