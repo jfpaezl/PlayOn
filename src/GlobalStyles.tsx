@@ -21,7 +21,7 @@ export const GlobalStyles = createGlobalStyle`
 
     /* Set core body defaults */
     body {
-    min-height: 100vh;
+    min-height: 100vh; 
     height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
@@ -36,6 +36,7 @@ export const GlobalStyles = createGlobalStyle`
 
     ::-webkit-scrollbar {
         width: .5rem;
+        height: .5rem;
     }
 
     ::-webkit-scrollbar-thumb {

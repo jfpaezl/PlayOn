@@ -39,6 +39,11 @@ export const FooterCss = styled.footer`
 
 
     @media (max-width: 768px){
+        .links{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem 2rem;
+        }
         .upLoad{
             display: flex;
             flex-direction: column;
