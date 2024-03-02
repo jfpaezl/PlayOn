@@ -7,58 +7,45 @@ import 'swiper/css/navigation';
 // import required modules
 import { EffectCoverflow, Navigation, Autoplay } from 'swiper/modules';
 import { HeroWrapper } from "./Hero.style";
+import { useState } from "react";
+
+// importar json de prueba
+import data from '../../../json/hero.json';
+import CardMovie from "../../pure/CardMovie";
 
 
 export default function Hero() {
+    const [dataJson] = useState(data);
 
     return (
         <HeroWrapper>
             <div className="containerCarts">
-            <Swiper
-                effect={'coverflow'}
-                centeredSlides={true}
-                slidesPerView="auto"
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false
-                }}
-                coverflowEffect={{
-                    rotate: 0,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 2,
-                    slideShadows: false,
-                }}
-                spaceBetween={50}
-                loop={true}
-                navigation={true}
-                modules={[EffectCoverflow, Navigation, Autoplay]}
-            >
-                <SwiperSlide>
-                    <img src="src/assets/img/1.jpg" alt="movie" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="src/assets/img/2.jpg" alt="movie" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="src/assets/img/3.jpg" alt="movie" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="src/assets/img/4.jpg" alt="movie" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="src/assets/img/5.jpg" alt="movie" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="src/assets/img/6.jpg" alt="movie" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="src/assets/img/7.jpg" alt="movie" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src="src/assets/img/8.jpg" alt="movie" />
-                </SwiperSlide>
-            </Swiper>
+                <Swiper
+                    effect={'coverflow'}
+                    centeredSlides={true}
+                    slidesPerView="auto"
+                    autoplay={{
+                        delay: 4500,
+                        disableOnInteraction: false
+                    }}
+                    coverflowEffect={{
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 2,
+                        slideShadows: false,
+                    }}
+                    spaceBetween={50}
+                    loop={true}
+                    navigation
+                    modules={[EffectCoverflow, Navigation, Autoplay]}
+                >
+                    {dataJson.map((item, index) => (
+                        <SwiperSlide key={index}>
+                            <CardMovie img={item.image} alt={item.title} />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
         </HeroWrapper>
     )

@@ -82,10 +82,10 @@ export const GlobalStyles = createGlobalStyle`
         --color-dark: #1D1731;
         --backgroud-section: #0A031C;
         --box-shadow-inputs: rgba(85, 75, 75, 0.479);
-        --box-shadow-cards1: rgba(6, 18, 60, 1);
-        --box-shadow-cards2: rgba(255, 44, 120, 1);
-        --box-shadow-cards3: rgba(234, 234, 234, 1);
-        --box-shadow-cards4: rgba(121, 121, 121, 1);
+        --box-shadow-cards1: rgba(6, 18, 60, 0.5);
+        --box-shadow-cards2: rgba(255, 44, 120, 0.5);
+        --box-shadow-cards3: rgba(234, 234, 234, 0.5);
+        --box-shadow-cards4: rgba(121, 121, 121, 0.5);
 
 
         color-scheme: light dark;
@@ -100,6 +100,9 @@ export const GlobalStyles = createGlobalStyle`
 
 
     .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
         max-width: 110rem;
         width: 100%;
         margin: 0 auto;

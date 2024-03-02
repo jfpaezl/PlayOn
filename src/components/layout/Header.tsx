@@ -13,7 +13,7 @@ export default function Header() {
         setSearch(!search);
     }
     return (
-        <HeaderWrapper className='container'>
+        <HeaderWrapper className='container containerModificated'>
             <div>
                 <h1>PlayOn</h1>
             </div>

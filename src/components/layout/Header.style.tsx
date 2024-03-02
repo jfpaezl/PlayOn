@@ -2,9 +2,11 @@ import { styled } from "styled-components";
 
 export const HeaderWrapper = styled.header`
     display: flex;
+    flex-direction: row !important;
     align-items: center;
     width: 100vw;
     gap: 5rem;
+
     .nav{
         display: flex;
         align-items: center;
