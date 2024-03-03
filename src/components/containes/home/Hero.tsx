@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { GrNext, GrPrevious } from "react-icons/gr";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -37,7 +38,10 @@ export default function Hero() {
                     }}
                     spaceBetween={50}
                     loop={true}
-                    navigation
+                    navigation={{
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    }}
                     modules={[EffectCoverflow, Navigation, Autoplay]}
                 >
                     {dataJson.map((item, index) => (
@@ -45,6 +49,12 @@ export default function Hero() {
                             <CardMovie img={item.image} alt={item.title} />
                         </SwiperSlide>
                     ))}
+                    <div className="swiper-button-next">
+                        <GrNext className='iconPagination' />
+                    </div>
+                    <div className="swiper-button-prev">
+                        <GrPrevious className='iconPagination' />
+                    </div>
                 </Swiper>
             </div>
         </HeroWrapper>

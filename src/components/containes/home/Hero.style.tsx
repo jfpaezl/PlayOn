@@ -8,6 +8,13 @@ export const HeroWrapper = styled.section`
     padding-top: 2rem;
     justify-content: center;
     align-items: center;
+    .swiper-button-next, .swiper-button-prev {
+        width: 3rem;
+        background-color: rgba(234, 234, 234, 0.7)!important;
+        border-radius: .5rem;
+        padding: 10px;
+        color: var(--color-text);
+    }
     .containerCarts{
         max-width:90rem;
         margin:auto;
@@ -31,6 +38,9 @@ export const HeroWrapper = styled.section`
         }
         .swiper-slide{
             max-width: 250px;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            display: none;
         }
     }
 `;

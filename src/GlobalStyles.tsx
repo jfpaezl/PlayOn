@@ -112,5 +112,11 @@ export const GlobalStyles = createGlobalStyle`
     .content{
         min-height: 70vh;
     }
+
+    @media (max-width: 768px){
+        .container{
+            padding: .5rem 1rem;
+        }
+    }
 `;
 
