@@ -16,6 +16,9 @@ export const ListContentCss = styled.div`
         .swiper-button-next, .swiper-button-prev {
             display: none;
         }
+        h2{
+            font-size: 1.3rem;
+        }
     }
 
 `;

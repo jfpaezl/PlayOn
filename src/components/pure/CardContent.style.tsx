@@ -19,6 +19,6 @@ export const CardContentCss = styled.div`
     }
     @media (max-width: 768px){
         width: 150px;
-        height: 265px;
+        height: 240px;
     }
 `;

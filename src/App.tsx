@@ -1,13 +1,15 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import ErrorPage from './pages/ErrorPage'
+import Player from './components/containes/player/Player'
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='*' element={<ErrorPage/>}/>
+        <Route path='/player' element={<Player/>}/>
         <Route path="/" element={<HomePage/>}/>
+        <Route path="*" element={<ErrorPage/>}/>
       </Routes>
     </Router>    
   )

@@ -82,6 +82,7 @@ export const GlobalStyles = createGlobalStyle`
         --color-icons-selected: #FF2C78;
         --color-dark: #1D1731;
         --backgroud-section: #0A031C;
+        --backgroud-selected: rgba(29, 23, 49, 1);
         --box-shadow-inputs: rgba(85, 75, 75, 0.479);
         --box-shadow-cards1: rgba(6, 18, 60, 0.5);
         --box-shadow-cards2: rgba(255, 44, 120, 0.5);
