@@ -6,8 +6,10 @@ export const CardContentCss = styled.div`
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    width: 250px;
-    height: 365px;
+    width: 100%;
+    height: 100%;
+    /* width: 250px;
+    height: 365px; */
     border-radius: .5rem;
     box-shadow: 5px 0 10px var(--box-shadow-cards1);
 
@@ -17,8 +19,5 @@ export const CardContentCss = styled.div`
         display: block;
         object-fit: contain;
     }
-    @media (max-width: 768px){
-        width: 150px;
-        height: 240px;
-    }
+
 `;

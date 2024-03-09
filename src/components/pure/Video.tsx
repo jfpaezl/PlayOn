@@ -74,8 +74,15 @@ export default function Video(
                     <span className="bar">{formatTime(duration)}</span>
                 </div>
                 <div>
-                    <input type="range" min={0} max={1} step={0.1} value={volume} onChange={handleVolumeChange} />
-                    <div className="barra"></div>
+                    <input 
+                        type="range" 
+                        min={0} 
+                        max={1} 
+                        step={0.1} 
+                        value={volume} 
+                        onChange={handleVolumeChange} 
+                    />
+                    <div className="barra" ></div>
                 </div>
                 <select className="steed" value={playbackRate} onChange={handlePlaybackRate}>
                     <option value="0.5">0.5</option>

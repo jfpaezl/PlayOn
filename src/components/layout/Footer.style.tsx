@@ -44,6 +44,8 @@ export const FooterCss = styled.footer`
             grid-template-columns: 1fr 1fr;
             gap: 1rem 2rem;
         }
+    }
+    @media (max-width: 420px){
         .upLoad{
             display: flex;
             flex-direction: column;

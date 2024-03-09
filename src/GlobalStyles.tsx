@@ -88,6 +88,8 @@ export const GlobalStyles = createGlobalStyle`
         --box-shadow-cards2: rgba(255, 44, 120, 0.5);
         --box-shadow-cards3: rgba(234, 234, 234, 0.5);
         --box-shadow-cards4: rgba(121, 121, 121, 0.5);
+        --box-shadow-cards5: rgba(93, 181, 200, 0.5);
+        --box-shadow-cards6: rgba(255, 175, 72, 0.5);
 
 
         color-scheme: light dark;

@@ -3,7 +3,9 @@ import { useState } from 'react';
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import CardContent from '../../../pure/CardContent';
 import { ListContentCss } from "./ListContent.style";
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -12,16 +14,17 @@ import 'swiper/css/navigation';
 // import required modules
 import { Navigation, HashNavigation } from 'swiper/modules';
 
-import CardContent from '../../../pure/CardContent';
-
-import data from '../../../../json/hero.json'
 
 
 interface ListContentProps {
     listName: string;
+    data: {
+        image: string;
+        title: string;
+    }[];
 }
 
-export default function ListContent({ listName }: ListContentProps) {
+export default function ListContent({ listName, data }: ListContentProps) {
 
     const [listContent] = useState(data)
     return (
@@ -45,11 +48,11 @@ export default function ListContent({ listName }: ListContentProps) {
                         },
                         1200: {
                             slidesPerView: 4,
-                            spaceBetween: 50,
+                            spaceBetween: 30,
                         },
                         1400: {
                             slidesPerView: 6,
-                            spaceBetween: 60,
+                            spaceBetween: 30,
                         },
                     }}
                     navigation={{
@@ -77,5 +80,6 @@ export default function ListContent({ listName }: ListContentProps) {
 }
 
 ListContent.prototype = {
-    listName: PropTypes.string.isRequired
+    listName: PropTypes.string.isRequired,
+    data: PropTypes.array.isRequired
 }

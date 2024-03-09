@@ -5,25 +5,33 @@ export const VideoCss = styled.div`
     height: 100vh;
     width: 100%;
     font-weight: 700;
+    overflow: hidden;
     .video{
-        height: 99%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
         width: 100%;
-        object-fit: cover;
     }
     .contendControls{
         position: absolute;
         display: flex;
-        justify-content: space-between;
+        gap: 1rem;
         bottom: 0;
         left: 0;
         width: 100%;
         padding: 1rem;
         align-items: center;
-    }
+        justify-content: center;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    } 
     .icon{
+        display: flex;
         background: none;
+        align-items: center;
+        justify-content: center;
         border: none;
-        color: var(--backgroud-selected);
+        color: var(--box-shadow-cards2);
         font-size: 2rem;
         margin: 0 1rem;
         cursor: pointer;
@@ -31,17 +39,17 @@ export const VideoCss = styled.div`
     .progres{
         display: flex;
         align-items: center;
+        gap: 1rem;
     }
     .bar{
-        color: var(--backgroud-selected);
+        color: var(--box-shadow-cards2);
         margin-right: .5rem;
     }
     .showBar{
         position: relative;
-        background: var(--backgroud-selected);
-        max-width: 64rem;
+        background: var(--color-text);
         height: 4px;
-        width: 100vh;
+        width: 120vh;
         border-radius: 20px;
     }
     .barra{
@@ -49,12 +57,15 @@ export const VideoCss = styled.div`
         top: 0;
         left: 0;
         height: 100%;
-        border-radius: 50%;
-        background: var(--backgroud-selected);
+        border-radius: 20px;
+        background: var(--box-shadow-cards2);
     }
     .steed{
-        background: var(--backgroud-selected);
+        background: var(--box-shadow-cards2);
         color: var(--color-text);
+        border: none;
+        border-radius: 20px;
+        padding: 3px;
     }
     .input{
             position: absolute;
