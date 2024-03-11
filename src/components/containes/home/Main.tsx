@@ -11,8 +11,9 @@ export default function Main() {
     return (
         <MainWrapper>
             <ListButtons />
-            <ListContent listName="Movies" data={data}/>
+            <ListContent listName="Movies" data={data} />
             <Recomended data={recomended}/>
+            <ListContent listName="Movies Top" data={data} top={true}/>
         </MainWrapper>
     );
 }

@@ -21,6 +21,7 @@ export const GlobalStyles = createGlobalStyle`
 
     /* Set core body defaults */
     body {
+    position: relative;
     min-height: 100vh; 
     height: 100vh;
     scroll-behavior: smooth;

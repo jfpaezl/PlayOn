@@ -22,11 +22,13 @@ interface ListContentProps {
         image: string;
         title: string;
     }[];
+    top?: boolean;
 }
 
-export default function ListContent({ listName, data }: ListContentProps) {
+export default function ListContent({ listName, data, top = false}: ListContentProps) {
 
     const [listContent] = useState(data)
+    const [indice] = useState(top)
     return (
         <ListContentCss>
             <h2>{listName}</h2>
@@ -64,7 +66,11 @@ export default function ListContent({ listName, data }: ListContentProps) {
                 >
                     {listContent.map((item, index) => (
                         <SwiperSlide key={index}>
-                            <CardContent img={item.image} alt={item.title} />
+                            {
+                                indice? 
+                                <CardContent img={item.image} alt={item.title} ind={index+1}/> : 
+                                <CardContent img={item.image} alt={item.title}/> 
+                            }
                         </SwiperSlide>
                     ))}
                     <div className="swiper-button-next">
@@ -81,5 +87,6 @@ export default function ListContent({ listName, data }: ListContentProps) {
 
 ListContent.prototype = {
     listName: PropTypes.string.isRequired,
-    data: PropTypes.array.isRequired
+    data: PropTypes.array.isRequired,
+    top: PropTypes.bool
 }
