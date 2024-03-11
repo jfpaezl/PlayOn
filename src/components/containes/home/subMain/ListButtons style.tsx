@@ -9,7 +9,7 @@ export const ListButtonsCss = styled.div`
     .icon{
         font-size: 1.2rem;
     }
-    @media (max-width: 900px){
+    @media (max-width: 1000px){
         overflow: auto;
         width: 100%;
     }

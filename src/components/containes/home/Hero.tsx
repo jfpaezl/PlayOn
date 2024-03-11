@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { GrNext, GrPrevious } from "react-icons/gr";
 
@@ -5,14 +6,17 @@ import { GrNext, GrPrevious } from "react-icons/gr";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { HeroWrapper } from "./Hero.style";
+
 // import required modules
 import { EffectCoverflow, Navigation, Autoplay } from 'swiper/modules';
-import { HeroWrapper } from "./Hero.style";
-import { useState } from "react";
+
+// import components
+import CardMovie from "../../pure/CardMovie";
 
 // importar json de prueba
-import data from '../../../json/hero.json';
-import CardMovie from "../../pure/CardMovie";
+import data from '../../../json/home/hero.json';
+
 
 
 export default function Hero() {

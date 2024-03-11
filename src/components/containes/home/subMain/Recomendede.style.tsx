@@ -30,6 +30,29 @@ export const RecomendedCss = styled.div`
     .messaje{
         padding: 1rem 3rem;
         display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: space-between;
+        max-height: 500px;
+    }
+    .contendButtons{
+        display: flex;
+        gap: 1rem;
+    }
+    .button{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        border: none;
+        background: var(--box-shadow-inputs);
+        color: var(--color-text);
+        border: 1px solid var(--color-text);
+        cursor: pointer;
+    }
+    .icon{
+        font-size: 1.5rem;
     }
     .title{
         font-size: 2rem;
@@ -85,6 +108,16 @@ export const RecomendedCss = styled.div`
     @media (max-width: 800px){
         .title{
             font-size: 1.5rem;
+        }
+        .button{
+            padding: 1rem 1.5rem;
+            font-size: .8rem;
+        }
+        .icon{
+            font-size: 1rem;
+        }
+        .contendButtons{
+            flex-direction: column;
         }
     }
     @media (max-width: 420px) {

@@ -1,20 +1,38 @@
+import PropTypes from 'prop-types';
+import { useState } from "react";
 import { RecomendedCss } from "./Recomendede.style";
+import { FaBookmark, FaHeart } from 'react-icons/fa';
 
-export default function Recomended () {
+interface RecomendedProps {
+    data:{
+        id: number;
+        alt: string;
+        img: string;
+    }[]
+}
+
+export default function Recomended ({data}: RecomendedProps) {
+
+    const [images] = useState(data)
+
     return (
         <RecomendedCss>
             <div className="messaje">
                 <strong className="title">Peliculas para ver de noche</strong>
-                <div>
-                    
+                <div className='contendButtons'>
+                    <button className='button'>{<FaHeart className="icon"/>}Favoritos</button>
+                    <button className='button'>{<FaBookmark className="icon"/>}Mi Lista</button>
                 </div>
             </div>
             <div className="imgreference">
-                <img className="img1" src="src/assets/img/1.jpg" alt="aaa" />
-                <img className="img2" src="src/assets/img/3.jpg" alt="aaa" />
-                <img className="img3" src="src/assets/img/2.jpg" alt="aaa" />
-                <img className="img4" src="src/assets/img/5.jpg" alt="aaa" />
+                {images.map((item) => (
+                    <img key={item.id} src={item.img} alt={item.alt}/>
+                ))}
             </div>
         </RecomendedCss>
     )
+}
+
+Recomended.prototype = {
+    data: PropTypes.array.isRequired
 }
