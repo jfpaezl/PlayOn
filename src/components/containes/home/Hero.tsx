@@ -40,7 +40,7 @@ export default function Hero() {
                         modifier: 2,
                         slideShadows: false,
                     }}
-                    spaceBetween={50}
+                    spaceBetween={64}
                     loop={true}
                     navigation={{
                         nextEl: '.swiper-button-next',

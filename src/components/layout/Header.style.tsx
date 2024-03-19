@@ -34,6 +34,9 @@ export const HeaderWrapper = styled.header`
         }
         transition: opacity 0.5s ease-in-out;
     }
+    .link{
+        color: var(--color-text);
+    }
     .contentIcons{
         display: flex;
         align-items: center;
@@ -42,6 +45,9 @@ export const HeaderWrapper = styled.header`
     .icon{
         font-size: 1.5rem;
         cursor: pointer;
+    }
+    .sr-only{
+        display: none;
     }
     @media (max-width: 900px) {
         .nav{

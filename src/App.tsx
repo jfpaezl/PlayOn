@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage'
 import ErrorPage from './pages/ErrorPage'
 import Player from './components/containes/player/Player'
 import LoginPage from './pages/LoginPage'
+import ProfilePage from './pages/ProfilePage'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path='/player' element={<Player/>}/>
         <Route path="/home" element={<HomePage/>}/>
+        <Route path="/profile" element={<ProfilePage/>}/>
         <Route path="/" element={<LoginPage/>}/>
         <Route path="*" element={<ErrorPage/>}/>
       </Routes>
