@@ -29,7 +29,9 @@ export default function Header() {
                     { !search ? <input type="text" placeholder='Search...' className='search'/>: null}
                     {search ? <IoSearchOutline className='icon' onClick={handlerSearch}/>: <MdClose className='icon' onClick={handlerSearch}/>}
                     <IoMdNotificationsOutline className='icon'/>
-                    <Link className='link' to="/profile"><span className='sr-only'>Ir al perfil de usuario:</span><CgProfile className='icon'/></Link>
+                    <Link className='link' to="/profile">
+                        <CgProfile className='icon' aria-label='perfil'/>
+                    </Link>
                 </div>
 
             </nav>

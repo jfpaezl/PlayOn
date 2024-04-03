@@ -1,0 +1,14 @@
+{
+    "id": 1,
+    "type": "Movie",
+    "title": "The Godfather",
+    "releaseYear": 1972,
+    "trailerUrl": "https://www.youtube.com/watch?v=sY1S34973zA",
+    "rating": 9.2,
+    "suitableAge": "18+",
+    "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+    "director": "Francis Ford Coppola",
+    "categories": ["Drama", "Crime"],
+    "coverImage": "cover_image_url.jpg",
+    "posterImage": "poster_image_url.jpg"
+  }

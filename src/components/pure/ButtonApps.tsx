@@ -4,11 +4,12 @@ import { ButtonAppsCss } from "./ButtonApps.style";
 interface ButtonAppsProps {
     children: JSX.Element;
     icon: JSX.Element;
+    onClick: () => void;
 }
 
-export default function ButtonApps({children, icon}: ButtonAppsProps) {
+export default function ButtonApps({children, icon, onClick}: ButtonAppsProps) {
     return (
-        <ButtonAppsCss>
+        <ButtonAppsCss onClick={onClick}>
             <>
             {icon}
             {children}
@@ -19,5 +20,6 @@ export default function ButtonApps({children, icon}: ButtonAppsProps) {
 
 ButtonApps.prototype = {
     children: PropTypes.string.isRequired,
-    icon: PropTypes.element.isRequired
+    icon: PropTypes.element.isRequired,
+    onclick: PropTypes.func.isRequired
 }
