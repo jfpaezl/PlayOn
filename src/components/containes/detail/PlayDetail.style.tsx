@@ -1,4 +1,4 @@
-import {styled} from 'styled-components'
+import { styled } from 'styled-components'
 
 export const PlayDetailCss = styled.div`
     display: grid;
@@ -47,6 +47,13 @@ export const PlayDetailCss = styled.div`
         padding: 1.5rem;
         border: 2px solid var(--color-icons);
         cursor: pointer;
+    }
+    .react-youtube {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
     .iconPlay{
         font-size: 3rem;

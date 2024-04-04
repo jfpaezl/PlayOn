@@ -1,21 +1,13 @@
 import ButtonApps from "../../pure/ButtonApps";
 import { PlayDetailCss } from "./PlayDetail.style";
-import YouTube from 'react-youtube';
 import { MdOutlineDownload } from "react-icons/md";
 import { AiOutlinePlayCircle } from "react-icons/ai";
 import { FaHeart, FaBookmark, FaPlay } from "react-icons/fa";
 import { useState } from "react";
 import Modal from "../../pure/Modal";
+import Youtube from "../../pure/Youtube";
+import PutuationBarra from "../../pure/PutuationBarra";
 
-const opts = {
-    height: '100%',
-    width: '100%',
-    playerVars: {
-        // https://developers.google.com/youtube/player_parameters
-        autoplay: 1,
-    },
-
-};
 
 export default function PlayDetail() {
     const [heart, setHeart] = useState(false)
@@ -60,14 +52,15 @@ export default function PlayDetail() {
                         <FaBookmark className={bookmark ? "icon select" : "icon"} onClick={handleBookmark} />
                     </div>
                 </div>
-
+                <span>califica el contenido</span>
+                <PutuationBarra />
             </div>
             <div className="fondo" style={{ backgroundImage: "url(https://valenciaplaza.com/public/Image/2016/12/culturplaza_66_01_NoticiaAmpliada.jpg)" }}>
                 <div className="contentPlay"><FaPlay className="iconPlay" /></div>
             </div>
             <div className={modalIsOpen ? "show" : "hidden"}>
                 <Modal onClick={openModal}>
-                    <YouTube videoId="2g811Eo7K8U" opts={opts}/>
+                    <Youtube link="https://www.youtube.com/watch?v=azfKhDMIrZo&list=RD0J1hIERZ1yA&index=16" paused={!modalIsOpen}/>
                 </Modal>
             </div>
         </PlayDetailCss>

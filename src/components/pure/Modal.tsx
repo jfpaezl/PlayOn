@@ -44,8 +44,6 @@ const ModalCss = styled.div`
         position: relative;
         background: var(--color-background);
         width: 100%;
-        height: 100%;
-        max-height: 350px;
         max-width: 700px;
         border-radius: 10px;
         padding: 1rem;
