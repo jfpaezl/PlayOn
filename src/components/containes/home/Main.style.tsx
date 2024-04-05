@@ -5,7 +5,7 @@ export const MainWrapper = styled.section`
     flex-direction: column;
     border-radius: 1rem;
     gap: 3rem;
-    padding: 1rem 2rem;
+    padding: 3rem;
     background-color: var(--backgroud-section);
 
     @media (max-width: 768px){

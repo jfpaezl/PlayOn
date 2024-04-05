@@ -5,11 +5,12 @@ export const ListButtonsCss = styled.div`
     gap: 1rem;
     margin: auto;
 
+
     padding: 1rem 0;
     .icon{
         font-size: 1.2rem;
     }
-    @media (max-width: 1000px){
+    @media (max-width: 1200px){
         overflow: auto;
         width: 100%;
     }

@@ -2,11 +2,10 @@ import {styled} from "styled-components";
 
 export const RecomendedCss = styled.div`
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 2fr 1fr;
     border-radius: 1rem;
     width: 100%;
     height: 100%;
-    max-height: 570px;
     overflow: hidden;
     box-shadow: 
         10px -5px 50px var(--box-shadow-cards2),
@@ -67,13 +66,7 @@ export const RecomendedCss = styled.div`
         width: 100%;
         border-radius: 1rem;
         
-        /* Ajusta el margen o posición vertical según sea necesario */
-        &:nth-child(4) {
-            margin-top: -140px;
-        }
-        &:nth-child(2) {
-            margin-top: -140px;
-        }
+
     }
     @media (max-width: 1200px){
         background-image: 

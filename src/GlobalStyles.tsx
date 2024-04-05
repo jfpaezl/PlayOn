@@ -108,13 +108,28 @@ export const GlobalStyles = createGlobalStyle`
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        max-width: 110rem;
+        max-width: 85%;
         width: 100%;
         margin: 0 auto;
         padding:1rem  2rem;
     }
     .content{
         min-height: 70vh;
+    }
+    .fade-enter {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .fade-enter.fade-enter-active {
+        opacity: 1;
+        transition: opacity 300ms ease-in;
+    }
+
+    @media (max-width: 1024px){
+        .container{
+            max-width: 90rem;
+        }
     }
 
     @media (max-width: 768px){

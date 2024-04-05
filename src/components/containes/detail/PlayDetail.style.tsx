@@ -1,11 +1,16 @@
 import { styled } from 'styled-components'
 
 export const PlayDetailCss = styled.div`
-    display: grid;
-    align-items: center;
-    grid-template-columns: 0.3fr 1fr;
-    overflow: hidden;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .contentDetail{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 0.3fr 1fr;
+        overflow: hidden;
+        border-radius: 10px;
+    }
     .details{
         display: flex;
         flex-direction: column;
@@ -13,7 +18,6 @@ export const PlayDetailCss = styled.div`
         width: 130%;
         height: 100%;
         transform: translateX(0%);
-        padding: 1rem 2rem;
         background: radial-gradient( 
             50%  /**ancho del gradiante */
             170%  /**alto del gradiante */
@@ -116,7 +120,9 @@ export const PlayDetailCss = styled.div`
         height: 100%;
     }
     @media (max-width: 768px){
-        grid-template-columns: 1fr;
+        .contentDetail{
+            grid-template-columns: 1fr;
+        }
         .details{
             width: 100%;
             height: 120%;

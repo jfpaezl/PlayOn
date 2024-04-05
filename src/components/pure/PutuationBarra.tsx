@@ -13,6 +13,7 @@ export default function PutuationBarra() {
                     max="10"
                     value={value}
                     onChange={(e) => setValue(Number(e.target.value))}
+                    aria-label='puntuation barra'
                 />
                 <span>{value}</span>
             </div>

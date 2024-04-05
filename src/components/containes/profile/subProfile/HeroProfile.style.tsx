@@ -61,7 +61,7 @@ export const HeroProfileCss = styled.section`
         gap: 1rem;
     }
 
-    @media (max-width: 1200px){
+    @media (max-width: 1400px){
         display: flex;
         flex-direction: column;
         align-items: center;

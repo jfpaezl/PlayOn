@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { IoCloseSharp } from "react-icons/io5";
 
 declare global {
     interface Window {
@@ -11,9 +12,10 @@ declare global {
 interface YoutubeProps {
     link: string;
     paused: boolean;
+    close?: () => void;
 }
 
-export default function Youtube({ link, paused }: YoutubeProps) {
+export default function Youtube({ link, paused, close }: YoutubeProps) {
     const videoId = new URL(link).searchParams.get('v');
     const playerRef = useRef<any>(null);
 
@@ -39,18 +41,24 @@ export default function Youtube({ link, paused }: YoutubeProps) {
             if (paused) {
                 playerRef.current.pauseVideo();
             }
+            else {
+                playerRef.current.playVideo();
+            }
         }
     }, [paused]);
 
     return (
         <YoutubeCss>
+            <div className='contentIcon' onClick={close}><IoCloseSharp className='icon'/></div>
             <div id="player"></div>
         </YoutubeCss>
     );
 }
 
 Youtube.prototype = {
-    link: PropTypes.string.isRequired
+    link: PropTypes.string.isRequired,
+    paused: PropTypes.bool.isRequired,
+    close: PropTypes.func.isRequired,
 }
 
 const YoutubeCss = styled.div`
@@ -65,5 +73,22 @@ const YoutubeCss = styled.div`
         left: 0;
         width: 100%;
         height: 100%;
+    }
+    .contentIcon{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        background-color: var(--box-shadow-inputs);
+        border-radius: 50%;
+        border: 1px solid var(--color-icons);
+        padding: 5px;
+        cursor: pointer;
+    }
+    .icon{
+        color: var(--color-icons);
     }
 `

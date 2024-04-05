@@ -20,11 +20,11 @@ export const CardContentCss = styled.div`
     }
     .top{
         position: absolute;
-        font-size: 8rem;
-        bottom:-10%;
+        font-size: 5rem;
+        bottom:-5%;
         right: 0;
         color: #ffffff8f;
         font-weight: 900;
-        z-index: 100 !important;
+        z-index: 2 !important;
     }
 `;
