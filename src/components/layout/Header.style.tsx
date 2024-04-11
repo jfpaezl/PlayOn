@@ -27,9 +27,9 @@ export const HeaderWrapper = styled.header`
             background-color: var(--backgroud-section);
             color: var(--color-text);
             
-            &:focus{
+            &:focus{ 
                 outline: none;
-                box-shadow: 0 0 30px rgba(85, 75, 75, 0.479);
+                box-shadow: 0 0 30px var(--box-shadow-inputs);
             }
         }
         transition: opacity 0.5s ease-in-out;

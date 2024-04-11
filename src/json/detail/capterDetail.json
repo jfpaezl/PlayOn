@@ -1,0 +1,61 @@
+{
+    "id": "1",
+    "name": "Los 100",
+    "description": "Esta es una breve descripción de la serie Los 100.",
+    "trailerUrl": "https://www.youtube.com/watch?v=ejemplo",
+    "director": "Nombre del director",
+    "categories": ["Categoría 1", "Categoría 2", "Categoría 3"],
+    "yearPublished": 2014,
+    "rating": 7.5,
+    "ageRating": "16+",
+    "coverImage": "url_de_la_imagen_de_portada",
+    "temporadas":[
+        {
+            "id": "1",
+            "name": "Temporada 1", 
+            "episodios": [
+                {
+                    "id": "1",
+                    "name": "Episodio 1",
+                    "url": "https://www.youtube.com/watch?v=2JtjNv8A1Z4",
+                    "imagen": "url_de_la_imagen_1",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec"
+                },
+                {
+                    "id": "2",
+                    "name": "Episodio 2",
+                    "url": "https://www.youtube.com/watch?v=2JtjNv8A1Z4",
+                    "imagen": "url_de_la_imagen_2",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec"
+                },
+                {
+                    "id": "3",
+                    "name": "Episodio 3",
+                    "url": "https://www.youtube.com/watch?v=2JtjNv8A1Z4",
+                    "imagen": "url_de_la_imagen_3",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "name": "Temporada 2",
+            "episodios": [
+                {
+                    "id": "1",
+                    "name": "Episodio 1",
+                    "url": "https://www.youtube.com/watch?v=2JtjNv8A1Z4",
+                    "imagen": "url_de_la_imagen_4",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec"
+                },
+                {
+                    "id": "2",
+                    "name": "Episodio 2",
+                    "url": "https://www.youtube.com/watch?v=2JtjNv8A1Z4",
+                    "imagen": "url_de_la_imagen_5",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec"
+                }
+            ]
+        }
+    ]
+}
