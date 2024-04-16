@@ -65,9 +65,6 @@ export default function PlayDetail() {
                     </Modal>
                 </div>
             </section>
-            <section>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae neque veritatis, quod maxime, delectus, quas consectetur sint impedit itaque facilis laudantium distinctio quos voluptatibus aliquid iusto enim amet id aut?</p>
-            </section>
         </PlayDetailCss>
     )
 }
