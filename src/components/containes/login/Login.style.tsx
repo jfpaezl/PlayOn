@@ -9,10 +9,11 @@ export const LoginCss = styled.div`
         position: relative;
         display: grid;
         gap: 1.5rem;
-        grid-template-columns: repeat(5, 1fr);
         width: 100%;
         height: 85vh;
-        background: var(--backgroud-section);
+        background-image: url('src/assets/img/Inicio-removebg-preview.webp');
+        background-size: cover;
+        background-position: center;
         border-radius: 1rem;
         overflow: hidden;
     }
@@ -35,7 +36,9 @@ export const LoginCss = styled.div`
     .contInput{
         display: flex;
         flex-direction: column;
-        gap: .5rem;
+        .labelLogin{
+            margin-bottom: .5rem;
+        }
     }
     .inputLogin{
         padding: .5rem;
@@ -47,6 +50,19 @@ export const LoginCss = styled.div`
             outline: none;
             box-shadow: 0 0 0 2px var(--box-shadow-cards4);
         }
+    }
+    .message{
+        color: var(--color-text);
+        font-size: 1rem;
+        font-weight: 500;
+        background: var(--color-dark);
+        padding: .5rem;
+        border-radius: .5rem;
+        text-align: center;
+    }
+    .error{
+        color: var(--color-error);
+        font-size: .8rem;
     }
     .linkR{
         color: var(--color-icons);
@@ -69,24 +85,7 @@ export const LoginCss = styled.div`
     .hiden{
         display: none;
     }
-    img{
-        width: 100%;
-        border-radius: 1rem;
-        
-        /* Ajusta el margen o posición vertical según sea necesario */
-        &:nth-child(4) {
-            margin-top: -140px;
-        }
-        &:nth-child(2) {
-            margin-top: -140px;
-        }
-        &:nth-child(7) {
-            margin-top: -140px;
-        }
-        &:nth-child(9) {
-            margin-top: -140px;
-        }
-    }
+    
     .contentLogin{
         position: absolute;
         z-index: 1;
@@ -100,44 +99,4 @@ export const LoginCss = styled.div`
         background-color: rgba(0, 0, 0, 0.5);
     }
     
-    @media (max-width: 1500px){
-        .section{
-            grid-template-columns: repeat(3, 1fr);
-        }
-        img{
-            /* Ajusta el margen o posición vertical según sea necesario */
-            &:nth-child(4) {
-                margin-top: 0;
-            }
-            &:nth-child(2) {
-                margin-top: 0;
-            }
-            &:nth-child(7) {
-                margin-top: 0;
-            }
-            &:nth-child(9) {
-                margin-top: 0;
-            }
-        }
-    }
-    @media (max-width: 768px){
-        .section{
-            grid-template-columns: repeat(2, 1fr);
-        }
-        img{
-            /* Ajusta el margen o posición vertical según sea necesario */
-            &:nth-child(4) {
-                margin-top: 0;
-            }
-            &:nth-child(2) {
-                margin-top: 0;
-            }
-            &:nth-child(7) {
-                margin-top: 0;
-            }
-            &:nth-child(9) {
-                margin-top: 0;
-            }
-        }
-    }
 `

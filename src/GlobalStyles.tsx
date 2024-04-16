@@ -78,6 +78,7 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 400;
 
         --color-text: #D9D9D9;
+        --color-error: #ff0011;
         --color-background: #020510;
         --color-icons:#ACACAC;
         --color-icons-selected: #FF2C78;

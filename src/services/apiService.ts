@@ -25,14 +25,13 @@ export async function apiService(url: string, options?: RequestOptions): Promise
             headers: options?.headers,
             body: options?.body,
         });
-
         if (!response.ok) {
             throw new Error(`Error al realizar la solicitud: ${response.statusText}`);
         }
 
         return await response.json();
     } catch (error) {
-        console.error(`Error: ${(error as Error).message}`);
+        console.error(`Error: ${(error as Error).message}`);    
         throw error;
     }
 }
