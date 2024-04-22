@@ -22,6 +22,7 @@ export async function apiService(url: string, options?: RequestOptions): Promise
     try {
         const response = await fetch(url, {
             method: options?.method || 'GET',
+            credentials: 'include',
             headers: options?.headers,
             body: options?.body,
         });

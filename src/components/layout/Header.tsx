@@ -26,7 +26,7 @@ export default function Header() {
                     <li><Link className='link' to="/home">Top</Link></li>
                 </ul>
                 <div className='contentIcons'>
-                    { !search ? <input type="text" placeholder='Search...' className='search'/>: null}
+                    { !search ? <div className='contentSearch'> <IoSearchOutline className='icon'/><input type="text" placeholder='Search...' className='search'/></div>: null}
                     {search ? <IoSearchOutline className='icon' onClick={handlerSearch}/>: <MdClose className='icon' onClick={handlerSearch}/>}
                     <IoMdNotificationsOutline className='icon'/>
                     <Link className='link' to="/profile">

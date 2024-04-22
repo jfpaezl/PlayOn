@@ -11,7 +11,7 @@ export const LoginCss = styled.div`
         gap: 1.5rem;
         width: 100%;
         height: 85vh;
-        background-image: url('src/assets/img/Inicio-removebg-preview.webp');
+        background-image: url('src/assets/img/Inicio.png');
         background-size: cover;
         background-position: center;
         border-radius: 1rem;

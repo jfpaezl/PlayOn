@@ -46,6 +46,12 @@ export const HeaderWrapper = styled.header`
         font-size: 1.5rem;
         cursor: pointer;
     }
+    .contentSearch{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
     .sr-only{
         display: none;
     }
@@ -56,7 +62,7 @@ export const HeaderWrapper = styled.header`
             }
         }
     }
-    @media (max-width: 768px){
+    @media (max-width: 1000px){
         .nav{
             display: none;
         }
